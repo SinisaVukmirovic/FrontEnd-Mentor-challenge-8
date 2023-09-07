@@ -1,0 +1,31 @@
+---
+import NavLinks from './navbar-elems/NavLinks.astro';
+---
+
+<nav>
+    <div class="logo">
+        <img src="/assets/graphics/logo.svg" alt="Logo">
+    </div>
+
+    <NavLinks />
+
+    <div class="cta-btn">
+        <a href="#">Get Started</a>
+    </div>
+</nav>
+
+<style>
+    nav {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cta-btn {
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+        background-color: var(--Bright-Red);
+        color: var(--Vary-Light-Gray);
+    }
+</style>

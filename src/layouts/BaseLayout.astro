@@ -17,6 +17,9 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<div class="theme-wrapper light">
@@ -77,15 +80,15 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 <script>
 	let themeToggleBtn;
 	let themeWrapper;
-	
-	function declare() {
+
+	function getDomElems() {
 		themeToggleBtn = document.querySelector(".theme-toggle");
 		themeWrapper = document.querySelector(".theme-wrapper");
 	}
-	
+
 	let body = document.querySelector("body");
 
-	declare();
+	getDomElems();
 
 	let darkTheme = false;
 
@@ -111,10 +114,9 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 			themeWrapper.remove();
 			clone.classList.remove("copy");
 
-			declare();
+			getDomElems();
 			events();
 		});
-
 	}
 
 	function events() {
@@ -122,5 +124,4 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 	}
 
 	events();
-
 </script>

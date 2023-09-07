@@ -1,0 +1,42 @@
+---
+const navLinks = [
+    {
+        text: 'Pricing',
+        href: '/pricing'
+    },
+    {
+        text: 'Product',
+        href: '#product'
+    },
+    {
+        text: 'About Us',
+        href: '/about-us'
+    },
+    {
+        text: 'Careers',
+        href: '/careers'
+    },
+    {
+        text: 'Community',
+        href: '#community'
+    },
+]
+---
+
+<div class="nav-links">
+    <ul>
+        {navLinks.map(link => (
+            <li>
+                <a href={link.href}>{link.text}</a>    
+            </li>
+        ))}
+    </ul>
+</div>
+
+<style>
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 3rem;
+    }
+</style>
