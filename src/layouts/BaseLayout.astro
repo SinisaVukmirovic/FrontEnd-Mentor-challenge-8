@@ -1,13 +1,13 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 
 export interface Props {
-  title?: string
+	title?: string;
 }
 
-const { title = 'Manage Landing Page'} = Astro.props as Props;
+const { title = "Manage Landing Page" } = Astro.props as Props;
 ---
 
 <html lang="en">
@@ -19,7 +19,108 @@ const { title = 'Manage Landing Page'} = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
+		<div class="theme-wrapper light">
+			<Header />
 
+			<div class="theme-toggle"></div>
+		</div>
 	</body>
 </html>
+
+<style>
+	.light {
+		background-color: #ddd;
+		color: #333;
+	}
+
+	.dark {
+		background-color: #333;
+		color: #ddd;
+	}
+
+	.theme-toggle {
+		width: 2rem;
+		height: 2rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: red;
+	}
+
+	.shape {
+		position: absolute;
+		z-index: 0;
+		width: 500px;
+		bottom: -180px;
+		left: -15px;
+		opacity: 0.1;
+	}
+
+	.copy {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		animation: appear 2s 1 both;
+	}
+
+	@keyframes appear {
+		0% {
+			clip-path: circle(30% at 125% -25%);
+		}
+		100% {
+			clip-path: circle(150% at 0 0);
+		}
+	}
+</style>
+
+<script>
+	let themeToggleBtn;
+	let themeWrapper;
+	
+	function declare() {
+		themeToggleBtn = document.querySelector(".theme-toggle");
+		themeWrapper = document.querySelector(".theme-wrapper");
+	}
+	
+	let body = document.querySelector("body");
+
+	declare();
+
+	let darkTheme = false;
+
+	function themeToggleAnimation() {
+		// Clone the wrapper
+		darkTheme = !darkTheme;
+		let clone = themeWrapper.cloneNode(true);
+		if (darkTheme) {
+			clone.classList.remove("light");
+			clone.classList.add("dark");
+		} else {
+			clone.classList.remove("dark");
+			clone.classList.add("light");
+		}
+
+		clone.classList.add("copy");
+		body.appendChild(clone);
+
+		// document.body.classList.add("stop-scrolling");
+
+		clone.addEventListener("animationend", () => {
+			// document.body.classList.remove("stop-scrolling");
+			themeWrapper.remove();
+			clone.classList.remove("copy");
+
+			declare();
+			events();
+		});
+
+	}
+
+	function events() {
+		themeToggleBtn.addEventListener("click", themeToggleAnimation);
+	}
+
+	events();
+
+</script>
