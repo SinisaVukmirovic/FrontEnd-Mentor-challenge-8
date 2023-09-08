@@ -34,9 +34,19 @@ const navLinks = [
 </div>
 
 <style>
+    .nav-links {
+        display: none;
+    }
+
     ul {
         list-style-type: none;
         display: flex;
         gap: 3rem;
+    }
+
+    @media (min-width: 1440px) {
+        .nav-links {
+            display: block;
+        }
     }
 </style>

@@ -1,10 +1,14 @@
 ---
+// this got changed in last Astro update?
+import logoImg from '../../public/assets/graphics/logo.svg';
+
 import NavLinks from './navbar-elems/NavLinks.astro';
 ---
 
 <nav>
     <div class="logo">
-        <img src="/assets/graphics/logo.svg" alt="Logo">
+        <!-- src = logoImg.src ? -->
+        <img src={logoImg.src} alt="Logo">
     </div>
 
     <NavLinks />
@@ -22,10 +26,21 @@ import NavLinks from './navbar-elems/NavLinks.astro';
         align-items: center;
     }
 
+    .logo {
+        width: 7rem;
+    }
+
     .cta-btn {
-        padding: 1rem 2rem;
-        border-radius: 10rem;
-        background-color: var(--Bright-Red);
-        color: var(--Vary-Light-Gray);
+        display: none;
+    }
+
+    @media (min-width: 1440px) {
+        .cta-btn {
+            display: block;
+            padding: 1rem 2rem;
+            border-radius: 10rem;
+            background-color: var(--Bright-Red);
+            color: var(--Vary-Light-Gray);
+        }
     }
 </style>
