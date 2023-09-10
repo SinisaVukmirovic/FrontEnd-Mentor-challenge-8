@@ -18,7 +18,7 @@ import Card from './about-elems/Card.astro';
 
 <style>
     .about {
-        margin: 1rem 0;
+        margin: 1rem auto;
     }
 
     .text {
@@ -70,8 +70,15 @@ import Card from './about-elems/Card.astro';
         margin-right: 1rem;
     } */
 
+    @media (min-width: 768px) {
+        .about {
+            width: 70%;
+        }
+    }
+
     @media (min-width: 1440px) {
         .about {
+            width: 100%;
             margin: 0;
             padding: 5rem 10%;
             display: grid;

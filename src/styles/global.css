@@ -27,6 +27,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* Custom scroll bars style */
 /* width */
 ::-webkit-scrollbar {
