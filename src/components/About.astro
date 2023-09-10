@@ -1,5 +1,5 @@
 ---
-
+import Card from './about-elems/Card.astro';
 ---
 
 <section id="about" class="about">
@@ -8,18 +8,19 @@
         <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams. </p>
     </div>
     <div class="boxes">
-        <div class="card">
+        <Card />
+        <!-- <div class="card">
             <h3><span>01</span>Track company-wide progress</h3>
             <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
-        </div>
+        </div> -->
     </div>
 </section>
 
 <style>
     .about {
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
-    
+
     .text {
         text-align: center;
         padding: 1rem 2rem;
@@ -38,11 +39,11 @@
     }
 
     .boxes {
-        padding-left: 1rem;
+        padding-left: .75rem !important;
 
-        .card {
-            margin-top: 3rem;
-
+        /* .card {
+            margin-top: 3rem; */
+/* 
             & h3 {
                 font-size: 1rem;
                 line-height: 2.2;
@@ -55,17 +56,46 @@
                 color: var(--Dark-Grayish-Blue);
                 padding: 1rem .5rem 1rem 0;
             }
-        }
+        } */
 
     }
 
-    .card span {
-        padding: .5rem 1.5rem;
+    /* .card span {
+        padding: .75rem 1.6rem;
         background-color: var(--Bright-Red);
         color: var(--Very-Light-Gray);
         border-radius: 10rem;
         font-size: .9rem;
         font-weight: 700;
         margin-right: 1rem;
+    } */
+
+    @media (min-width: 1440px) {
+        .about {
+            margin: 0;
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+        
+        .text {
+            text-align: left;
+            padding: 0;
+
+            & h2 {
+                font-size: 3.25rem;
+                line-height: 1.1;
+            }
+
+            & p {
+                width: 33ch;
+                font-size: 1.3rem;
+                line-height: 1.5;
+            }
+        }
     }
+        .boxes {
+            padding-left: 0;
+        }
 </style>
