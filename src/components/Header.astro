@@ -12,10 +12,10 @@ import Navbar from './Navbar.astro';
         <div class="content">
             <h1>Bring everyone together to build better products.</h1>
             <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+            <button class="cta-btn">Get Started</button>
         </div>
     </div>
 
-    <button class="cta-btn">Get Started</button>
 </header>
 
 <style>
@@ -25,17 +25,22 @@ import Navbar from './Navbar.astro';
     }
 
     .illustration {
-        margin: 2rem auto 1rem;
+        margin: 2rem 0 1rem;
+
+        & img {
+            margin: 0 auto;
+        }
     }
 
     .content {
-        padding: 0 .8rem;
+        padding: 0 .5rem;
         text-align: center;
 
         & h1 {
-            font-size: 2.3rem;
-            line-height: 1.2;
+            font-size: 2.4rem;
+            line-height: 1.25;
             color: var(--Dark-Blue);
+            margin-bottom: .5rem;
         }
 
         & p {
@@ -43,39 +48,67 @@ import Navbar from './Navbar.astro';
             line-height: 1.7;
             font-weight: 400;
         }
+
+        .cta-btn {
+            padding: .75rem 1.5rem;
+            margin: 1.75rem auto;
+            display: block;
+            background-color: var(--Bright-Red);
+            color: var(--Very-Light-Gray);
+            font-size: .8rem;
+            border-radius: 10rem;
+            border: none;
+            outline: none;
+            filter: drop-shadow(0 1rem .15rem var(--Very-Pale-Red));
+        }
     }
 
-    .cta-btn {
-        padding: .75rem 1.5rem;
-        margin: 2rem auto;
-        display: block;
-        background-color: var(--Bright-Red);
-        color: var(--Very-Light-Gray);
-        font-size: .8rem;
-        border-radius: 10rem;
-        border: none;
-        outline: none;
-        filter: drop-shadow(0 .3rem .15rem var(--Dark-Grayish-Blue));
-    }
 
     @media (min-width: 1440px) {
-        /* header {
-            min-height: 100vh;
+        header {
             padding: 5rem 10%;
-        } */
+        }
 
         .hero {
-            margin-top: 10rem;
+            margin-top: 4rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            grid-template-columns: 5fr 7fr;
+            gap: 2rem;
             align-items: center;
 
+            .illustration {
+                order: 2;
+
+                & img {
+                    /* width: 100%; */
+                    width: 45rem;
+                }
+            }
+
+            .content {
+                text-align: left;
+                padding: 5rem 0;
+            }
+
             & h1 {
-                font-size: 4.5rem;
-                line-height: 1.1;
+                font-size: 4.5rem !important;
+                line-height: 1.1 !important;
                 color: var(--Dark-Blue);
             }
+
+            & p {
+                width: 33ch;
+                font-size: 1.35rem;
+                padding: 3rem 0;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                margin: 0;
+                font-size: 1rem;
+                filter: drop-shadow(0 .3rem .15rem var(--Dark-Grayish-Blue));
+            }
+            
         }
     }
 </style>

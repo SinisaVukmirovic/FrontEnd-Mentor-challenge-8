@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 import Header from "../components/Header.astro";
+import About from "../components/About.astro";
 
 export interface Props {
 	title?: string;
@@ -24,6 +25,8 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 	<body>
 		<div class="theme-wrapper light">
 			<Header />
+
+			<About />
 
 			<div class="theme-toggle"></div>
 		</div>
