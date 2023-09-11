@@ -72,9 +72,18 @@ import NavLinks from './navbar-elems/NavLinks.astro';
 
 <script>
     const menuBth = document.querySelector('.menu-btn');
+    let menuIcon = menuBth.querySelector('img');
     const navLinks = document.querySelector('.nav-links ul');
+    let menuOpen = false;
 
     menuBth.addEventListener('click', () => {
+        if (menuOpen) {
+            menuOpen = !menuOpen;
+            menuIcon.src = '/assets/icons/icon-hamburger.svg';
+        } else {
+            menuOpen = !menuOpen;
+            menuIcon.src = '/assets/icons/icon-close.svg';
+        }
         navLinks.classList.toggle('show-nav-links');
     });
 </script>
