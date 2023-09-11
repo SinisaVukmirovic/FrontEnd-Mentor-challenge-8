@@ -34,19 +34,52 @@ const navLinks = [
 </div>
 
 <style>
-    .nav-links {
-        display: none;
-    }
-
     ul {
         list-style-type: none;
         display: flex;
-        gap: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 80%;
+        font-weight: 700;
+        position: absolute;
+        top: 7rem;
+        left: -100%;
+        transform:  translateX(-50%);
+        background-color: var(--Very-Pale-Red);
+        transition: left 300ms ease-out;
+
+        & li {
+            padding: 1rem;
+        }
+
+    }
+
+    .show-nav-links {
+        left: 50%;
     }
 
     @media (min-width: 1440px) {
         .nav-links {
             display: block;
+            /* padding: unset; */
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            padding: 0;
+            position: static;
+            background-color: unset;
+            top: unset;
+            left: unset;
+            transform: unset;
+
+            & li {
+                min-width: 7rem;
+            }
         }
     }
 </style>

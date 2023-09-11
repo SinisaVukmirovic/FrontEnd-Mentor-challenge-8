@@ -1,6 +1,7 @@
 ---
 // this got changed in last Astro update?
 import logoImg from '../../public/assets/graphics/logo.svg';
+import hamburgerIcon from '../../public/assets/icons/icon-hamburger.svg';
 
 import NavLinks from './navbar-elems/NavLinks.astro';
 ---
@@ -17,6 +18,10 @@ import NavLinks from './navbar-elems/NavLinks.astro';
 
     <div class="cta-btn">
         <a href="#">Get Started</a>
+    </div>
+
+    <div class="menu-btn">
+        <img src={hamburgerIcon.src} alt="Hamburger Menu Icon">
     </div>
 </nav>
 
@@ -36,7 +41,17 @@ import NavLinks from './navbar-elems/NavLinks.astro';
         display: none;
     }
 
+    .menu-btn {
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+
     @media (min-width: 1440px) {
+        .menu-btn {
+            display: none;
+        }
+
         .logo {
             width: 12rem;
 
@@ -54,3 +69,12 @@ import NavLinks from './navbar-elems/NavLinks.astro';
         }
     }
 </style>
+
+<script>
+    const menuBth = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links ul');
+
+    menuBth.addEventListener('click', () => {
+        navLinks.classList.toggle('show-nav-links');
+    });
+</script>
