@@ -38,26 +38,31 @@ const navLinks = [
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         padding: 1rem;
-        width: 80%;
         font-weight: 700;
         position: absolute;
-        top: 7rem;
-        left: -100%;
+        top: 4rem;
+        left: 50%;
+        width: 95%;
+        max-height: 0;
         transform:  translateX(-50%);
         background-color: var(--Very-Pale-Red);
-        transition: left 300ms ease-out;
+        transition: max-height .5s ease-out;
 
         & li {
-            padding: 1rem;
+            padding: .75rem 1.5rem;
+            opacity: 0;
+            transition: opacity .2s linear .2s;
         }
-
     }
 
     .show-nav-links {
-        left: 50%;
+        max-height: 100rem;
+
+        & li {
+            opacity: 1;
+        }
     }
 
     @media (min-width: 1440px) {
@@ -67,9 +72,11 @@ const navLinks = [
         }
 
         ul {
+            width: unset;
             display: flex;
             flex-direction: row;
-            gap: 2rem;
+            justify-content: center;
+            /* gap: 2rem; */
             padding: 0;
             position: static;
             background-color: unset;
@@ -78,7 +85,7 @@ const navLinks = [
             transform: unset;
 
             & li {
-                min-width: 7rem;
+                /* min-width: 7rem; */
             }
         }
     }
