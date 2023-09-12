@@ -8,7 +8,7 @@ import SocLinks from './footer-elem/SocLinks.astro';
 
 <footer>
     <form>
-        <input type="text">
+        <input type="text" placeholder="Update in your inbox">
         <button type="submit">GO</button>
     </form>
 
@@ -61,22 +61,53 @@ import SocLinks from './footer-elem/SocLinks.astro';
     footer {
         padding: 2rem 1rem .5rem;
         background-color: var(--Very-Dark-Blue);
-        color: var(--Very-Light-Gray);
     }
 
     form {
         display: grid;
         grid-template-columns: 3fr 1fr;
         gap: .25rem;
+        padding: 1rem 0;
+
+        & input {
+            padding: .5rem 1rem;
+            border-radius: 10rem;
+
+            &::placeholder {
+                font-size: .8rem;
+            }
+        }
+
+        & button {
+            border: none;
+            background-color: var(--Bright-Red);
+            border-radius: 10rem;
+            font-size: .8rem;
+            color: var(--Very-Light-Gray);
+        }
     }
 
     .links {
         display: flex;
         justify-content: space-around;
+        padding: 2rem 0;
+        color: var(--Dark-Grayish-Blue);
+        font-weight: 400;
+        font-size: 1rem;
     }
 
     .soc-links {
         display: flex;
+    }
+
+    .logo {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+    
+        & img {
+            filter: invert(1);
+        }
     }
 
     .attribution {
