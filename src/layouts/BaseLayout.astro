@@ -86,11 +86,15 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 </style>
 
 <script>
+	import toggleMenu from '../modules/toggleMenu.js';
+	
 	let themeToggleBtn;
+	let menuBtn;
 	let themeWrapper;
 
 	function getDomElems() {
 		themeToggleBtn = document.querySelector(".theme-toggle");
+		menuBtn = document.querySelector(".menu-btn");
 		themeWrapper = document.querySelector(".theme-wrapper");
 	}
 
@@ -129,6 +133,7 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 
 	function events() {
 		themeToggleBtn.addEventListener("click", themeToggleAnimation);
+		menuBtn.addEventListener('click', toggleMenu);   
 	}
 
 	events();
