@@ -1,0 +1,27 @@
+---
+const list1Links = [
+    {
+        href: '#',
+        text: 'Home'
+    },
+    {
+        href: '#',
+        text: 'Pricing'
+    },
+    {
+        href: '#',
+        text: 'Products'
+    },
+    {
+        href: '#',
+        text: 'About Us'
+    }
+]
+---
+
+<ul class="list-1">
+    
+    {list1Links.map(link => (
+        <li><a href={link.href}>{link.text}</a></li>
+    ))}
+</ul>

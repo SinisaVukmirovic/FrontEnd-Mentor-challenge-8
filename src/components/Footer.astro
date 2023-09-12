@@ -1,0 +1,92 @@
+---
+import logoImg from '../../public/assets/graphics/logo.svg';
+
+import List1 from './footer-elem/List1.astro';
+import List2 from './footer-elem/List2.astro';
+import SocLinks from './footer-elem/SocLinks.astro';
+---
+
+<footer>
+    <form>
+        <input type="text">
+        <button type="submit">GO</button>
+    </form>
+
+    <div class="links">
+        <List1 />
+        <List2 />
+    </div>
+
+    <SocLinks />
+
+    <!-- <ul class="soc-links">
+        <li class="link">
+            <a href="#">
+                <img src="/assets/icons/icon-twitter.svg" alt="Social media icon">
+            </a>
+        </li>
+        <li class="link">
+            <a href="#">
+                <img src="/assets/icons/icon-twitter.svg" alt="Social media icon">
+            </a>
+        </li>
+        <li class="link">
+            <a href="#">
+                <img src="/assets/icons/icon-twitter.svg" alt="Social media icon">
+            </a>
+        </li>
+        <li class="link">
+            <a href="#">
+                <img src="/assets/icons/icon-twitter.svg" alt="Social media icon">
+            </a>
+        </li>
+        <li class="link">
+            <a href="#">
+                <img src="/assets/icons/icon-twitter.svg" alt="Social media icon">
+            </a>
+        </li>
+    </ul> -->
+
+    <div class="logo">
+        <img src={logoImg.src} alt="Logo">
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/SinisaVukmirovic" target="_blank">Sinisa Vukmirovic</a>.
+    </div>
+</footer>
+
+<style>
+    footer {
+        padding: 2rem 1rem .5rem;
+        background-color: var(--Very-Dark-Blue);
+        color: var(--Very-Light-Gray);
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: .25rem;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .soc-links {
+        display: flex;
+    }
+
+    .attribution {
+        color: var(--Dark-Grayish-Blue);
+        text-align: center;
+        padding: 1rem 0 .5rem;
+        font-size: .7rem;
+
+        & a {
+            color: var(--Bright-Red);
+        }
+    }
+</style>

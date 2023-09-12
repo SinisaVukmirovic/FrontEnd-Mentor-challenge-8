@@ -1,0 +1,41 @@
+---
+const socLinks = [
+    {
+        href: '#',
+        icon: '/assets/icons/icon-twitter.svg'
+    },
+    {
+        href: '#',
+        icon: '/assets/icons/icon-twitter.svg'
+    },
+    {
+        href: '#',
+        icon: '/assets/icons/icon-twitter.svg'
+    },
+    {
+        href: '#',
+        icon: '/assets/icons/icon-twitter.svg'
+    },
+    {
+        href: '#',
+        icon: '/assets/icons/icon-twitter.svg'
+    }
+]
+---
+
+<ul class="soc-links">
+    {socLinks.map(link => (
+        <li class="link">
+            <a href={link.href}>
+                <img src={link.icon} alt="Social media icon">
+            </a>
+        </li>
+    ))}
+</ul>
+
+<style>
+    .soc-links {
+        display: flex;
+        justify-content: space-around;
+    }    
+</style>
