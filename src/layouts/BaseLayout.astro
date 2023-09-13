@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 export interface Props {
@@ -24,7 +23,6 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 	</head>
 	<body>
 		<div class="theme-wrapper light">
-			<Header />
 
 			<slot />
 
@@ -38,12 +36,12 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 <style>
 	.light {
 		background-color: var(--Very-Light-Gray);
-		color: #333;
+		/* color: var(--Dark-Blue); */
 	}
 
 	.dark {
-		background-color: #333;
-		color: #ddd;
+		background-color: var(--Dark-Blue);
+		/* color: var(--Dark-Grayish-Blue); */
 	}
 
 	.theme-toggle {

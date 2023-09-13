@@ -1,0 +1,65 @@
+---
+import Member from './community-elems/Member.astro';
+---
+
+<section id="community" class="community">
+    <h2>What they’ve said</h2>
+    <div class="slider">
+        <Member />
+    </div>
+</section>
+
+<style>
+    .community {
+        margin: 3rem 0;
+        overflow: hidden;
+
+        & h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--Dark-Blue);
+        }
+    }
+
+    .slider {
+        width: 400vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20vw;
+        padding: 2rem 9vw;
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+        animation: slide 30s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        24% {
+            transform: translateX(0);
+        }
+        26% {
+            transform: translateX(-100vw);
+        }
+        49% {
+            transform: translateX(-100vw);
+        }
+        51% {
+            transform: translateX(-200vw);
+        }
+        74% {
+            transform: translateX(-200vw);
+        }
+        76% {
+            transform: translateX(-300vw);
+        }
+        99% {
+            transform: translateX(-300vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+</style>
