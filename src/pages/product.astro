@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Navbar from "../components/Navbar.astro";
+---
+
+<BaseLayout>
+    <Navbar />
+
+    <div class="product">
+        <div class="illustration">
+            <img src="/assets/graphics/illustration-intro.svg" alt="Graphic illustration">
+        </div>
+        <div class="content">
+            <h1>Get Your Product to these stats, too!</h1>
+            <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .product {
+        max-width: 1200px;
+        margin: 5rem auto;
+        padding: 2rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 2fr;
+        gap: 5rem;
+
+        & h1 {
+            color: var(--Dark-Blue);
+            margin-bottom: 2rem;
+        }
+    }
+</style>

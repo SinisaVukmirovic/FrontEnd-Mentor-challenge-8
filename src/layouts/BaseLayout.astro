@@ -58,7 +58,7 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 		top: 0;
 		left: 0;
 		z-index: 100;
-		animation: appear 2s ease-in 1 both;
+		animation: appear 1.5s ease-in 1 both;
 	}
 
 	@keyframes appear {
@@ -116,10 +116,10 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 		clone.classList.add("copy");
 		body.appendChild(clone);
 
-		body.style.overflow = "hidden";
+		// body.style.overflow = "hidden";
 
 		clone.addEventListener("animationend", () => {
-			body.style.overflow = "scroll";
+			// body.style.overflow = "scroll";
 
 			themeWrapper.remove();
 			clone.classList.remove("copy");

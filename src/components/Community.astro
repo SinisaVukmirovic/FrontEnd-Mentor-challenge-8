@@ -11,6 +11,10 @@ import Member from './community-elems/Member.astro';
 
 <style>
     .community {
+        /* had to exclude community section in order for this type of theme switch to work */
+        /* display: none; */
+        /* visibility: hidden; */
+
         margin: 3rem 0;
         overflow: hidden;
 
@@ -106,3 +110,16 @@ import Member from './community-elems/Member.astro';
         }
     }
 </style>
+
+<!-- <script>
+    const communitySection = document.querySelector('.community');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            communitySection.style.width = 'auto';
+        } 
+        if (window.scrollY < 500) {
+            communitySection.style.width = '50vw';
+        }
+    })
+</script> -->

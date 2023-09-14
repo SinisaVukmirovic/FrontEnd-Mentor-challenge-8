@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Navbar from '../components/Navbar.astro';
+import Community from '../components/Community.astro';
+---
+
+<BaseLayout>
+    <Navbar />
+
+    <div class="info">
+        <h1>Our Amazing Community</h1>
+        <p>Consists of Web Developer enthusiasts and Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse ipsum.</p>
+    </div>
+
+    <Community /> 
+</BaseLayout>
+
+<style>
+    .info {
+        padding: 3rem 1rem;
+        text-align: center;
+
+        & h1 {
+            color: var(--Dark-Blue);
+            margin-bottom: 2rem;
+        }
+
+        & p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .info {
+            padding: 3rem 20%;
+
+            & p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+</style>
