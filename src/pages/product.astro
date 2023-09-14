@@ -4,11 +4,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 ---
 
-<BaseLayout>
+<BaseLayout title="Product">
     <Navbar />
 
     <div class="product">
-        <div class="illustration">
+        <div class="illustration" transition:name="product-chart">
             <img src="/assets/graphics/illustration-intro.svg" alt="Graphic illustration">
         </div>
         <div class="content">
