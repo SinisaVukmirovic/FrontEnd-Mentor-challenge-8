@@ -63,12 +63,23 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 
 	@keyframes appear {
 		0% {
-			clip-path: circle(0% at 100% 0%);
+			clip-path: circle(1% at 100% 0%);
 		}
 		100% {
 			clip-path: circle(150% at 100% 0%);
 		}
 	}
+
+	/* @media (min-width: 1440px) {
+		@keyframes appear {
+			0% {
+				clip-path: circle(1% at 100% 0%);
+			}
+			100% {
+				clip-path: circle(150% at 100% 0%);
+			}
+		}
+	} */
 </style>
 
 <script>
@@ -105,10 +116,11 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 		clone.classList.add("copy");
 		body.appendChild(clone);
 
-		// document.body.classList.add("stop-scrolling");
+		body.style.overflow = "hidden";
 
 		clone.addEventListener("animationend", () => {
-			// document.body.classList.remove("stop-scrolling");
+			body.style.overflow = "scroll";
+
 			themeWrapper.remove();
 			clone.classList.remove("copy");
 

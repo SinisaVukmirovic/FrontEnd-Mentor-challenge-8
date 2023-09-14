@@ -54,4 +54,26 @@ const members = [
             font-weight: 400;
         }
     }
+
+    @media (min-width: 1440px) {
+        .member {
+            width: 35vw;
+            padding: 0 2.5rem;
+
+            & img {
+                width: 6rem;
+                aspect-ratio: 1 / 1;
+                border-radius: 100%;
+                margin: 2rem auto;
+            }
+
+            .name {
+                color: var(--Dark-Blue);
+            }
+
+            & .quote {
+                font-size: 1.3rem;
+            }
+        }
+    }
 </style>

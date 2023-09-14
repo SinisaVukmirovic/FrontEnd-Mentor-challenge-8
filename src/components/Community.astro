@@ -30,6 +30,10 @@ import Member from './community-elems/Member.astro';
         /* overflow: hidden; */
         /* overflow: scroll; */
         animation: slide 30s ease-in-out infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
     }
 
     @keyframes slide {
@@ -62,4 +66,43 @@ import Member from './community-elems/Member.astro';
         }
     }
 
+    @media (min-width: 1440px) {
+        .slider {
+            width: 135vw;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5vw;
+            padding: 2rem 32vw;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            24% {
+                transform: translateX(0);
+            }
+            26% {
+                transform: translateX(-40vw);
+            }
+            49% {
+                transform: translateX(-40vw);
+            }
+            51% {
+                transform: translateX(-80vw);
+            }
+            74% {
+                transform: translateX(-80vw);
+            }
+            76% {
+                transform: translateX(-120vw);
+            }
+            99% {
+                transform: translateX(-120vw);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    }
 </style>
