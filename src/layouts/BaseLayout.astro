@@ -32,9 +32,7 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 			<Footer />
 
 			<div class="theme-toggle">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: #f25f3a;transform: ;msFilter:;"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>
-
-				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: #f25f3a;transform: ;msFilter:;"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"></path></svg> -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #f25f3a;transform: ;msFilter:;"><path d="M19.071 19.071c3.833-3.833 3.833-10.31 0-14.143s-10.31-3.833-14.143 0-3.833 10.31 0 14.143 10.31 3.833 14.143 0zM7.051 7.051c2.706-2.707 7.191-2.708 9.898 0l-9.898 9.898c-2.708-2.707-2.71-7.19 0-9.898z"></path></svg>
 			</div>
 		</div>
 	</body>
@@ -43,25 +41,20 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 <style>
 	.light {
 		background-color: var(--Very-Light-Gray);
-		/* color: var(--Dark-Blue); */
 	}
 
 	.dark {
 		background-color: var(--Dark-Blue);
-		/* color: var(--Dark-Grayish-Blue); */
 	}
 
 	.theme-toggle {
 		width: 3rem;
 		height: 3rem;
-		/* padding-top: 1rem;
-		padding-right: 1rem; */
 		border-radius: 0 0 0 100%;
 		position: absolute;
 		top: 0;
 		right: 0;
 		background-color: var(--Dark-Blue);
-		/* background-color: var(--Very-Light-Gray); */
 		display: grid;
 		place-items: center;
 
@@ -87,17 +80,6 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 			clip-path: circle(150% at 100% 0%);
 		}
 	}
-
-	/* @media (min-width: 1440px) {
-		@keyframes appear {
-			0% {
-				clip-path: circle(1% at 100% 0%);
-			}
-			100% {
-				clip-path: circle(150% at 100% 0%);
-			}
-		}
-	} */
 
 	.theme-toggle.change-bg {
 		background: var(--Very-Light-Gray);
@@ -131,8 +113,9 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 
 	function themeToggleAnimation() {
 		themeToggleBtn.classList.toggle('change-bg');
-			logo.classList.toggle('invert-logo');
-			h1.classList.toggle('change-clr');
+		changeThemeIcon();
+		logo.classList.toggle('invert-logo');
+		h1.classList.toggle('change-clr');
 		
 		// Clone the wrapper
 		darkTheme = !darkTheme;
@@ -167,4 +150,8 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 	}
 
 	events();
+
+	function changeThemeIcon() {
+		themeToggleBtn.querySelector
+	}
 </script>
