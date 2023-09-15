@@ -1,0 +1,113 @@
+
+<section id="testimonial" class="testimonial">
+    <h2>What they’ve said</h2>
+    <div class="quotes">
+        <div class="member">
+            <img src="/assets/imgs/avatar-anisha.png" alt="Member avatar picture">
+            <p class="name"><strong>Anisha Li</strong></p>
+            <p class="quote">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+        </div>
+        <div class="member">
+            <img src="/assets/imgs/avatar-ali.png" alt="Member avatar picture">
+            <p class="name"><strong>Ali Bravo</strong></p>
+            <p class="quote">“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+        </div>
+        <div class="member">
+            <img src="/assets/imgs/avatar-richard.png" alt="Member avatar picture">
+            <p class="name"><strong>Shanai Gough</strong></p>
+            <p class="quote">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .testimonial {
+        margin: 3rem 0;
+
+        & h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--Dark-Blue);
+        }
+    }
+
+    .quotes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .member {
+        padding: 1rem 3rem;
+        text-align: center;
+
+        & img {
+            width: 5rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 100%;
+            margin: 2rem auto;
+        }
+
+        .name {
+            color: var(--Dark-Blue);
+        }
+
+        .quote {
+            font-size: .9rem;
+            margin-top: 1.5rem;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+    }
+
+    .member:nth-child(2) {
+        display: none;
+    }
+    .member:nth-child(3) {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        .quotes {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .member:nth-child(2) {
+            display: block;
+        }
+        .member:nth-child(3) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .quotes {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .member {
+            padding: 0 2.5rem;
+
+            & img {
+                width: 6rem;
+                aspect-ratio: 1 / 1;
+                border-radius: 100%;
+                margin: 2rem auto;
+            }
+
+            .name {
+                color: var(--Dark-Blue);
+            }
+
+            & .quote {
+                font-size: 1.3rem;
+            }
+        }
+
+        .member:nth-child(2) {
+            display: block;
+        }
+        .member:nth-child(3) {
+            display: block;
+        }
+    }
+</style>
