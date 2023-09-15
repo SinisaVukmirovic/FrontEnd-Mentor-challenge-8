@@ -98,6 +98,10 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 			}
 		}
 	} */
+
+	.theme-toggle.change-bg {
+		background: var(--Very-Light-Gray);
+	}
 </style>
 
 <script>
@@ -107,10 +111,16 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 	let menuBtn;
 	let themeWrapper;
 
+	let logo;
+	let h1;
+
 	function getDomElems() {
 		themeToggleBtn = document.querySelector(".theme-toggle");
 		menuBtn = document.querySelector(".menu-btn");
 		themeWrapper = document.querySelector(".theme-wrapper");
+
+		logo = document.querySelector('.logo a img');
+		h1 = document.querySelector('h1');
 	}
 
 	let body = document.querySelector("body");
@@ -120,6 +130,10 @@ const { title = "Manage Landing Page" } = Astro.props as Props;
 	let darkTheme = false;
 
 	function themeToggleAnimation() {
+		themeToggleBtn.classList.toggle('change-bg');
+			logo.classList.toggle('invert-logo');
+			h1.classList.toggle('change-clr');
+		
 		// Clone the wrapper
 		darkTheme = !darkTheme;
 		let clone = themeWrapper.cloneNode(true);

@@ -20,7 +20,7 @@ import Navbar from './Navbar.astro';
 
 <style>
     header {
-        min-height: 100vh;
+        min-height: 100dvh;
         padding: 1rem 1rem 3rem;
     }
 
@@ -41,6 +41,7 @@ import Navbar from './Navbar.astro';
             line-height: 1.25;
             color: var(--Dark-Blue);
             margin-bottom: .5rem;
+            transition: color 1s linear 1s;
         }
 
         & p {
@@ -113,4 +114,8 @@ import Navbar from './Navbar.astro';
             }
         }
     }
+
+    h1.change-clr {
+		color: var(--Very-Light-Gray) !important;
+	}
 </style>
