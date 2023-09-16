@@ -30,12 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./screenshot.jpg)
+![screenshot](./screenshot.jpg)
 
 ### Links
 
 - Solution URL: [CODE](https://github.com/SinisaVukmirovic/FrontEnd-Mentor-challenge-8)
-- Live Site URL: [DEMO]()
+- Live Site URL: [DEMO](https://front-end-mentor-challenge-8.vercel.app/)
 
 ## My process
 
@@ -47,6 +47,8 @@ Users should be able to:
 ### What I learned
 
 Had so many problems with implementing this type of theme switch functionality into a multipage project like this. Learned that this type of theme switch is suited only for some small langing page projects, for example, not a multipage project...
+Had to ommit slider in testimonials section to have it "working"...
+Changing pages breaks the functionality of theme switching...
 
 ## Author
 
