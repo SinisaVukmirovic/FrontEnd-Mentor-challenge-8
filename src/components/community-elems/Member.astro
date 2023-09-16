@@ -26,7 +26,7 @@ const members = [
 {members.map(member => (
     <div class="member">
         <img src={member.img} alt="Member avatar picture">
-        <p class="name"><strong>{member.name}</strong></p>
+        <p class="name">{member.name}</p>
         <p class="quote">{member.quote}</p>
     </div>
 ))}
@@ -45,6 +45,7 @@ const members = [
 
         .name {
             color: var(--Dark-Blue);
+            font-weight: 700;
         }
 
         .quote {
@@ -65,10 +66,6 @@ const members = [
                 aspect-ratio: 1 / 1;
                 border-radius: 100%;
                 margin: 2rem auto;
-            }
-
-            .name {
-                color: var(--Dark-Blue);
             }
 
             & .quote {

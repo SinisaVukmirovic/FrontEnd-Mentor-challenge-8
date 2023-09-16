@@ -6,7 +6,9 @@ import Community from '../components/Community.astro';
 ---
 
 <BaseLayout title="Out Community">
-    <Navbar />
+    <div class="didnt-plan-properly">
+        <Navbar />
+    </div>
 
     <div class="info">
         <h1>Our Amazing Community</h1>
@@ -17,6 +19,10 @@ import Community from '../components/Community.astro';
 </BaseLayout>
 
 <style>
+    .didnt-plan-properly {
+        padding: 1rem;
+    }
+
     .info {
         padding: 3rem 1rem;
         text-align: center;
@@ -31,9 +37,15 @@ import Community from '../components/Community.astro';
         }
     }
 
+    @media (min-width: 768px) {
+        .didnt-plan-properly {
+            padding: 1rem 10% 1rem;
+        }
+    }
+
     @media (min-width: 1440px) {
         .info {
-            padding: 3rem 20%;
+            padding: 5rem 20% 1rem;
 
             & p {
                 font-size: 1.3rem;

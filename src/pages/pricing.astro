@@ -5,191 +5,204 @@ import Navbar from "../components/Navbar.astro";
 ---
 
 <BaseLayout title="Pricing Plans">
+  <div class="didnt-plan-properly">
     <Navbar />
+  </div>
 
-    <div class="price-container" id="root">
-        <h2>Our Price Plan</h2>
+  <div class="price-container" id="root">
+    <h2>Our Price Plan</h2>
 
-        <div class="prices-box">
-            <div class="price-card">
-                <div class="price-card-header">
-                <span class="title">Premium</span>
-                <span class="price">$358,26<small>/ yearly</small></span>
-                </div>
-        
-                <div class="price-card-content">
-                    <ul>
-                        <li>500</li>
-                        <li>3 projects</li>
-                        <li>Unlimited guide</li>
-                        <li>unlimited flows</li>
-                        <li>unlimited branded theme</li>
-                        <li>email support</li>
-                    </ul>
-            
-                    <button class="btn">choose plan</button>
-                </div>
-            </div>
+    <div class="prices-box">
+      <div class="price-card">
+        <div class="price-card-header">
+          <span class="title">Premium</span>
+          <span class="price">$358,26<small>/ yearly</small></span>
         </div>
+
+        <div class="price-card-content">
+          <ul>
+            <li>500</li>
+            <li>3 projects</li>
+            <li>Unlimited guide</li>
+            <li>unlimited flows</li>
+            <li>unlimited branded theme</li>
+            <li>email support</li>
+          </ul>
+
+          <button class="btn">choose plan</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <a class="credit" href="https://codepen.io/hanibal/pen/dyvvzMY?editors=1100">Creator of this card design</a>
-
+  <a class="credit" href="https://codepen.io/hanibal/pen/dyvvzMY?editors=1100"
+    >Creator of this card design</a
+  >
 </BaseLayout>
 
 <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #1e1e21;
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-}
-.price-container {
-  padding: 3rem;
-
-
-  & h2 {
-    text-align: center;
-    text-transform: capitalize;
-    color: var(--Dark-Blue);
-    font-size: 3rem;
-    margin-bottom: 3rem;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  .bill-switch-container {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-
-    .switch {
-      position: relative;
-      width: 45px;
-      height: 25px;
-      display: inline-block;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .switch .round {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 1px solid #be3760;
-      background: transparent;
-      border-radius: 30px;
-      transition: 0.2s ease-in-out;
-      cursor: pointer;
-    }
-    .switch .round::before {
-      content: "";
-      position: absolute;
-      top: 2.3px;
-      left: 2px;
-      background: #ccc;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      transition: 0.2s ease-in-out;
-    }
-    .switch input:checked + .round {
-      background: #be3760;
-    }
-    .switch input:checked + .round::before {
-      transform: translateX(20px);
-    }
+  body {
+    background: #1e1e21;
+    color: #ccc;
+    font-family: "Poppins", sans-serif;
   }
-}
 
-.prices-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.price-card {
-  background: RGB(34, 37, 44);
-  padding: 3rem;
-  width: 35ch;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  transition:.3s;
+  .didnt-plan-properly {
+      padding: 1rem;
+  }
   
-   &:hover {
-    box-shadow: 2px 5px 8px 4px rgba(0,0,0,.3);
-     transform:scale(1.1);
-  }
-}
+  .price-container {
+    padding: 3rem;
 
-.price-card-header {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 1rem;
+    & h2 {
+      text-align: center;
+      text-transform: capitalize;
+      color: var(--Dark-Blue);
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+    .bill-switch-container {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
 
-  .title {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-  .price {
-    font-size: 2rem;
-    font-weight: bold;
-
-    & small {
-      font-size: 1rem;
+      .switch {
+        position: relative;
+        width: 45px;
+        height: 25px;
+        display: inline-block;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .switch .round {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid #be3760;
+        background: transparent;
+        border-radius: 30px;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      .switch .round::before {
+        content: "";
+        position: absolute;
+        top: 2.3px;
+        left: 2px;
+        background: #ccc;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transition: 0.2s ease-in-out;
+      }
+      .switch input:checked + .round {
+        background: #be3760;
+      }
+      .switch input:checked + .round::before {
+        transform: translateX(20px);
+      }
     }
   }
-}
-.price-card-content {
-  line-height: 1.7;
 
-  & ul {
-    padding: 0 10px;
-    color: #8c9494;
-    list-style: none; /* Remove default bullets */
+  .prices-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-  & ul li::before {
-    content: "\2022";
-    color: #be3760;
-    font-weight: 300;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+
+  .price-card {
+    background: RGB(34, 37, 44);
+    padding: 3rem;
+    width: 35ch;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 2px 5px 8px 4px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+    }
   }
-}
 
-.btn {
-  width: 100%;
-  margin-top: 3rem;
-  background: transparent;
-  padding: 0.8rem 1rem;
-  border: 2px solid #be3760;
-  border-radius: 3px;
-  text-transform: capitalize;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s ease-in;
+  .price-card-header {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
 
-  &:hover {
-    background: #be3760;
-    box-shadow: 0 2px 6px #be3760;
+    .title {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+
+      & small {
+        font-size: 1rem;
+      }
+    }
   }
-}
+  .price-card-content {
+    line-height: 1.7;
 
-.credit {
+    & ul {
+      padding: 0 10px;
+      color: #8c9494;
+      list-style: none; /* Remove default bullets */
+    }
+    & ul li::before {
+      content: "\2022";
+      color: #be3760;
+      font-weight: 300;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 3rem;
+    background: transparent;
+    padding: 0.8rem 1rem;
+    border: 2px solid #be3760;
+    border-radius: 3px;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      background: #be3760;
+      box-shadow: 0 2px 6px #be3760;
+    }
+  }
+
+  .credit {
     padding: 0 2rem 0.5rem;
     text-align: center;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--Bright-Red);
-}
+  }
+
+  @media (min-width: 768px) {
+      .didnt-plan-properly {
+          padding: 1rem 10% 1rem;
+      }
+  }
 </style>
